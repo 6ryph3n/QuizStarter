@@ -11,13 +11,15 @@ import Foundation
 // Create a struct to model the data
 struct Facts {
     let fact: String
-    let truth: Bool
+    let answer1: (String, Bool)
+    let answer2: (String, Bool)
+    let answer3: (String, Bool)
+    let answer4: (String, Bool)
 }
 
 // Facts and true/false answers
 let trivia: [Facts] = [
-Facts(fact: "Only female koalas can whistle", truth: false),
-Facts(fact: "Camels are cannibalistic", truth: false),
-Facts(fact: "Blue whales are technically whales", truth: true),
-Facts(fact: "All ducks are birds", truth: true)
+    Facts(fact: "Only female koalas can whistle", answer1: ("George Washington", false), answer2: ("Franklin D. Roosevelt", true), answer3: ("Woodrow Wilson", false), answer4: ("Andrew Jackson", false)),
+    Facts(fact: "Which of the following countries has the most residents?", answer1: ("Nigeria", true), answer2: ("Russia", false), answer3: ("Iran", false), answer4: ("Vietnam", false))
+
 ]
