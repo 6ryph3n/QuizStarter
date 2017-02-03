@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         loadGameStartSound()
         // Start game
         playGameStartSound()
+        resetQuestions()
         displayQuestion()
     }
 
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
         } else {
             questionField.text = "Sorry, wrong answer!"
         }
-        
+        trivia.remove(at: indexOfSelectedQuestion)
         loadNextRoundWithDelay(seconds: 2)
     }
     
@@ -103,6 +104,7 @@ class ViewController: UIViewController {
         
         questionsAsked = 0
         correctQuestions = 0
+        resetQuestions()
         nextRound()
     }
     
