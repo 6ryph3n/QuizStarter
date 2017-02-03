@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var questionField: UILabel!
-
     @IBOutlet weak var firstResponse: UIButton!
     @IBOutlet weak var secondResponse: UIButton!
     @IBOutlet weak var thirdResponse: UIButton!
@@ -79,7 +78,7 @@ class ViewController: UIViewController {
             correctQuestions += 1
             questionField.text = "Correct!"
         } else {
-            questionField.text = "Sorry, wrong answer!"
+            questionField.text = "Sorry, wrong answer! The correct answer is \(trivia[indexOfSelectedQuestion].possibleAnswers[correctAnswer - 1])."
         }
         trivia.remove(at: indexOfSelectedQuestion)
         loadNextRoundWithDelay(seconds: 2)
