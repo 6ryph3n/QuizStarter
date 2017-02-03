@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         loadGameStartSound()
         // Start game
         playGameStartSound()
+        sortQuestions()
         displayQuestion()
     }
 
@@ -42,15 +43,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func displayQuestion() {
-        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.count)
-        let questionDictionary = trivia[indexOfSelectedQuestion]
+        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: availableQuestions.count)
+        let questionDictionary = availableQuestions[indexOfSelectedQuestion]
         questionField.text = questionDictionary.fact
         firstResponse.setTitle(questionDictionary.possibleAnswers[0], for: .normal)
         secondResponse.setTitle(questionDictionary.possibleAnswers[1], for: .normal)
         thirdResponse.setTitle(questionDictionary.possibleAnswers[2], for: .normal)
         fourthResponse.setTitle(questionDictionary.possibleAnswers[3], for: .normal)
         playAgainButton.isHidden = true
+        trivia.remove(at: indexOfSelectedQuestion)
+        sortQuestions()
+        
     }
     
     func displayScore() {
@@ -71,7 +77,7 @@ class ViewController: UIViewController {
         // Increment the questions asked counter
         questionsAsked += 1
         
-        let selectedQuestionDict = trivia[indexOfSelectedQuestion]
+        let selectedQuestionDict = availableQuestions[indexOfSelectedQuestion]
         let correctAnswer = selectedQuestionDict.correctAnswer
         
         if (sender === firstResponse &&  correctAnswer == 1)  || (sender === secondResponse && correctAnswer == 2) || (sender === thirdResponse && correctAnswer == 3) || (sender === fourthResponse && correctAnswer == 4) {
