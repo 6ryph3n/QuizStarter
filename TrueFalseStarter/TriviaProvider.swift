@@ -18,16 +18,16 @@ struct Facts {
 
 // Primary collection of Facts
 var triviaSource: [Facts] = [
-    Facts(fact: "Which of the following countries has the most residents?", possibleAnswers: ["Nigeria", "Russia", "Iran", "Vietnam"], correctAnswer: 1),
-    Facts(fact: "This was the only US President to serve more than two consecutive terms", possibleAnswers: ["George Washington", "Franklin D. Roosevelt", "Woodrow Wilson", "Andrew Jackson"], correctAnswer: 2),
-    Facts(fact: "In what year was the United Nations founded?", possibleAnswers: ["1918", "1919", "1945", "1954"], correctAnswer: 3),
-    Facts(fact: "The Titanic departed from the United Kingdom. Where was it supposed to arrive?", possibleAnswers: ["Paris", "Washington D.C.", "New York City", "Boston"], correctAnswer: 3),
-    Facts(fact: "Which nation produces the most oil?", possibleAnswers: ["Iran", "Iraq", "Brazil", "Canada"], correctAnswer: 4),
-    Facts(fact: "Which country has most recently won consecutive World Cups in Soccer?", possibleAnswers: ["Italy", "Brazil", "Argentina", "Spain"], correctAnswer: 2),
-    Facts(fact: "Which of the following rivers is longest?", possibleAnswers: ["Yangtze", "Mississippi", "Congo", "Mekong"], correctAnswer: 2),
-    Facts(fact: "Which city is the oldest?", possibleAnswers: ["Mexico City", "Cape Town", "San Juan", "Sydney"], correctAnswer: 1),
-    Facts(fact: "Which country was the first to allow women to vote in national elections?", possibleAnswers: ["Poland", "United States", "Sweden", "Senegal"], correctAnswer: 1),
-    Facts(fact: "Which of these countries won the most medals in the 2012 Summer Games?", possibleAnswers: ["France", "Germany", "Japan", "Great Britian"], correctAnswer: 4)
+    Facts(fact: "How often are members of the House of Representatives elected?", possibleAnswers: ["Every two years", "Every four years", "Every six years", "Elected for life"], correctAnswer: 1),
+    Facts(fact: "How often are members of the Senate elected?", possibleAnswers: ["Every two years", "Every four years", "Every six years", "Elected for life"], correctAnswer: 3),
+    Facts(fact: "How often is a new president elected?", possibleAnswers: ["Every two years", "Every four years", "Every six years", "Elected for life"], correctAnswer: 2),
+    Facts(fact: "There are nine Supreme Court Justices. How long does each Justice serve?", possibleAnswers: ["Two years", "Four years", "Six years", "Elected for life"], correctAnswer: 4),
+    Facts(fact: "When was the United States Constitution written?", possibleAnswers: ["1776", "1787", "1805", "1820"], correctAnswer: 2),
+    Facts(fact: "Who is the only president to have served more than two terms?", possibleAnswers: ["George Washington", "Thomas Jefferson", "John Adams", "Franklin D. Roosevelt"], correctAnswer: 4),
+    Facts(fact: "When was the last time the Liberty Bell was rung?", possibleAnswers: ["1976", "1776", "1846", "1824"], correctAnswer: 3),
+    Facts(fact: "When was Hawaii, the last of the 50 states, admitted to the Union?", possibleAnswers: ["1850", "1790", "1900", "1959"], correctAnswer: 4),
+    Facts(fact: "In 1820 Salem, NJ held a trial against?", possibleAnswers: ["Witches", "Tomatoes", "Guns", "Whisky"], correctAnswer: 2),
+    Facts(fact: "What year did Christopher Columbus discover the American continents?", possibleAnswers: ["1432", "1757", "1492", "1619"], correctAnswer: 3)
 ]
 
 
