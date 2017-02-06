@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var gameSound: SystemSoundID = 0
     
     
+    @IBOutlet var myView: UIView!
     @IBOutlet weak var questionField: UILabel!
     @IBOutlet weak var firstResponse: UIButton!
     @IBOutlet weak var secondResponse: UIButton!
@@ -27,10 +28,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var fourthResponse: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
     
+    
 
     override func viewDidLoad() {
+        firstResponse.layer.cornerRadius = 10
+        secondResponse.layer.cornerRadius = 10
+        thirdResponse.layer.cornerRadius = 10
+        fourthResponse.layer.cornerRadius = 10
+        playAgainButton.layer.cornerRadius = 10
         super.viewDidLoad()
         loadGameStartSound()
+
         // Start game
         playGameStartSound()
         resetQuestions()
